@@ -1,10 +1,10 @@
 <template>
   <q-page padding>
     <h1>Compound Lending Rates</h1>
-    <h4>
+    <h2>
       Historical APY Data for
-      <a class="text-h4" href="https://compound.finance" target="_blank">Compound</a>
-    </h4>
+      <a href="https://compound.finance" target="_blank">Compound</a>
+    </h2>
   </q-page>
 </template>
 

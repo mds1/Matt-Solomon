@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lhh Lpr lFf">
     <q-header class="transparent">
       <q-toolbar>
         <!-- 1: SITE LOGO -->
@@ -9,9 +9,9 @@
 
         <!-- 2: SITE NAME/SUBTITLE -->
         <router-link class="no-text-decoration float-to-left col-xs-8 col-sm-auto" to="/">
-          <q-toolbar-title class="header--title"
-            >Matt Solomon
-            <div class="header--subtitle">Ethereum developer</div>
+          <q-toolbar-title class="site-title">
+            Matt Solomon
+            <div class="site-subtitle q-mt-sm">Ethereum developer</div>
           </q-toolbar-title>
         </router-link>
       </q-toolbar>
@@ -33,13 +33,3 @@ export default defineComponent({
   },
 });
 </script>
-
-<style lang="sass" scoped>
-.header--title
-  font-size: 1.75rem
-  font-weight: bold
-
-.header--subtitle
-  font-size: 1.25rem
-  font-weight: normal
-</style>

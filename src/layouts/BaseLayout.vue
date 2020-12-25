@@ -1,19 +1,19 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header class="transparent">
       <q-toolbar>
-        <q-btn
-          flat
-          dense
-          round
-          icon="menu"
-          aria-label="Menu"
-          @click="leftDrawerOpen = !leftDrawerOpen"
-        />
+        <!-- 1: SITE LOGO -->
+        <router-link class="no-text-decoration col-xs-3 col-sm-auto" to="/">
+          <img src="~assets/logo.png" height="60 rem" class="q-ma-md" style="border-radius: 50%" />
+        </router-link>
 
-        <q-toolbar-title> Quasar App </q-toolbar-title>
-
-        <div>Quasar v{{ $q.version }}</div>
+        <!-- 2: SITE NAME/SUBTITLE -->
+        <router-link class="no-text-decoration float-to-left col-xs-8 col-sm-auto" to="/">
+          <q-toolbar-title class="header--title"
+            >Matt Solomon
+            <div class="header--subtitle">Ethereum developer</div>
+          </q-toolbar-title>
+        </router-link>
       </q-toolbar>
     </q-header>
 
@@ -33,3 +33,13 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="sass" scoped>
+.header--title
+  font-size: 1.75rem
+  font-weight: bold
+
+.header--subtitle
+  font-size: 1.25rem
+  font-weight: normal
+</style>

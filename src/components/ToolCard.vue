@@ -3,7 +3,7 @@
     <q-card @click="openPage(props.to)" class="card-border">
       <q-card-section>
         <div class="card-title row justify-start items-center">
-          <img :src="`/tool-img/${props.img}`" class="q-mr-md" style="height:4rem">
+          <img :src="`/tool-img/${props.img}`" class="q-mr-md" style="height: 4rem" />
           {{ title }}
         </div>
       </q-card-section>

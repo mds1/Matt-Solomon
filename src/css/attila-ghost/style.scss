@@ -10,6 +10,20 @@ $breakpoint-large: 960px;
 $breakpoint-medium: 640px;
 $breakpoint-small: 480px;
 $inner: calc(64rem + 8vw);
+
+// Hyperlink mixin
+@mixin hyperlink {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 400;
+  box-shadow: inset 0 -2px 0 $color-primary;
+  transition: all ease-out 0.1s;
+
+  &:focus,
+  &:hover {
+    box-shadow: inset 0 -3px 0 $color-primary-active;
+  }
+}
 /* ==========================================================================
    Basics
    ========================================================================== */
@@ -28,7 +42,7 @@ html.menu-active {
   overflow-y: hidden;
 }
 
-body {
+@mixin default-style {
   font-family: var(--font-primary);
   font-size: 1em;
   line-height: 1.75em;
@@ -45,6 +59,10 @@ body {
   }
 }
 
+body {
+  @include default-style;
+}
+
 button,
 input,
 select,
@@ -57,16 +75,7 @@ textarea {
   line-height: 2em;
 
   a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: 400;
-    box-shadow: inset 0 -2px 0 $color-primary;
-    transition: all ease-out 0.1s;
-
-    &:focus,
-    &:hover {
-      box-shadow: inset 0 -3px 0 $color-primary-active;
-    }
+    @include hyperlink;
   }
 
   h1,

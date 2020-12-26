@@ -1,34 +1,16 @@
 <template>
   <q-page padding>
-    <div class="row justify-center" style="max-width: 800px; margin: 0 auto">
-      <tool-card
-        class="tool-card col-xs-12 col-sm-5"
-        to="https://cancel-ethereum-transactions.web.app/"
-        title="Cancel Transactions"
-        description="Easily cancel or speed up Ethereum transactions from any wallet."
-        img="easy-button.png"
-      />
-      <tool-card
-        class="tool-card col-xs-12 col-sm-5"
-        to="https://ethdashboard.com/"
-        title="ETH Dashboard"
-        description="A customized dashboard for the Ethereum data you care about."
-        img="eth-dashboard.png"
-      />
-      <tool-card
-        class="tool-card col-xs-12 col-sm-5"
-        to="compound"
-        title="Compound Rates"
-        description="Figures and stats of Compound's historical lending rates."
-        img="compound.svg"
-      />
-      <tool-card
-        class="tool-card col-xs-12 col-sm-5"
-        to="https://www.scopelift.co/blog/fakerdao"
-        title="FakerDAO"
-        description="An exploration of MakerDAO's governance incentives."
-        img="fakerdao.png"
-      />
+    <div class="horizontal-center text-left" style="max-width: 450px">
+      <img src="~assets/logo.png" height="60 rem" class="q-ma-none" style="border-radius: 50%" />
+      <h1 class="q-mt-none">Hello.</h1>
+      <p>
+        I help build awesome things on Ethereum at <a href="https://www.scopelift.co/" target="_blank">ScopeLift</a>.
+      </p>
+      <p>
+        Sometimes I
+        <a href="https://blog.mattsolomon.dev/">write</a>, and I also have some
+        <router-link :to="{ name: 'projects' }"> side projects</router-link>.
+      </p>
     </div>
   </q-page>
 </template>

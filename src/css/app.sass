@@ -31,8 +31,11 @@
 .font-color-primary
   @include font-color-primary
 
-  .font-color-secondary
+.font-color-secondary
   @include font-color-secondary
+
+.main-container
+  @include default-style
 
 h1
   font-size: 4rem
@@ -53,8 +56,11 @@ h5, h6
   font-weight: 500
 
 p
-  font-size: 1.75em
-  line-height: 1.75em
+  font-size: 1.75rem
+  line-height: 2rem
+
+p > a, .hyperlink
+  @include hyperlink
     
 .card-border
   border: 1px solid grey
@@ -71,3 +77,21 @@ p
 
 .card-body
   margin-bottom: 0
+
+.horizontal-center
+  margin: 0 auto
+
+.content
+  max-width: 800px
+
+.header-item
+  @include font-color-secondary
+  @include no-text-decoration
+  font-size: 1.6rem
+  line-height: 2rem
+  margin-right: 2rem
+
+.active-header-item
+  @include font-color-primary
+  @include no-text-decoration
+  font-weight: bold

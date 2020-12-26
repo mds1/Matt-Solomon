@@ -1,19 +1,20 @@
 <template>
-  <q-layout view="lhh Lpr lFf">
-    <q-header class="transparent">
+  <q-layout view="lhh Lpr lFf" class="main-container">
+    <q-header class="transparent q-mx-md q-pt-md">
       <q-toolbar>
-        <!-- 1: SITE LOGO -->
-        <router-link class="no-text-decoration col-xs-3 col-sm-auto" to="/">
-          <img src="~assets/logo.png" height="60 rem" class="q-ma-md" style="border-radius: 50%" />
-        </router-link>
-
-        <!-- 2: SITE NAME/SUBTITLE -->
-        <router-link class="no-text-decoration float-to-left col-xs-8 col-sm-auto" to="/">
-          <q-toolbar-title class="site-title">
-            Matt Solomon
-            <div class="site-subtitle q-mt-sm">Ethereum developer</div>
-          </q-toolbar-title>
-        </router-link>
+        <!-- HEADER LINKS -->
+        <div class="row justify-start">
+          <router-link active-class="active-header-item" class="col-auto header-item" exact :to="{ name: 'home' }">
+            Home
+          </router-link>
+          <router-link active-class="active-header-item" class="col-auto header-item" exact :to="{ name: 'projects' }">
+            Projects
+          </router-link>
+          <a href="https://blog.mattsolomon.dev/" class="col-auto header-item"> Blog </a>
+          <router-link active-class="active-header-item" class="col-auto header-item" exact :to="{ name: 'contact' }">
+            Contact
+          </router-link>
+        </div>
       </q-toolbar>
     </q-header>
 

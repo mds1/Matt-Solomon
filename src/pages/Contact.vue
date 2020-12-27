@@ -1,9 +1,12 @@
 <template>
-  <q-page padding>
+  <q-page padding class="q-mx-sm">
+    <p class="horizontal-center q-py-lg" style="max-width: 400px">
+      Thanks for trying to get in touch! Pick the method of your choice.
+    </p>
     <p class="horizontal-center" style="max-width: 400px">
       <q-list>
         <!-- Email -->
-        <q-item>
+        <q-item class="q-pl-none">
           <q-item-section avatar>
             <q-icon color="darktext" name="fas fa-envelope" />
           </q-item-section>
@@ -14,7 +17,7 @@
         </q-item>
 
         <!-- Twitter -->
-        <q-item>
+        <q-item class="q-pl-none">
           <q-item-section avatar>
             <q-icon class="twitter" name="fab fa-twitter" />
           </q-item-section>
@@ -27,7 +30,7 @@
         </q-item>
 
         <!-- Telegram -->
-        <q-item>
+        <q-item class="q-pl-none">
           <q-item-section avatar>
             <q-icon class="telegram" name="fab fa-telegram" />
           </q-item-section>
@@ -38,7 +41,7 @@
         </q-item>
 
         <!-- GitHub -->
-        <q-item>
+        <q-item class="q-pl-none">
           <q-item-section avatar>
             <q-icon class="github" name="fab fa-github" />
           </q-item-section>

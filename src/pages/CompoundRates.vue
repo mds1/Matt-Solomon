@@ -80,52 +80,12 @@
           <!-- Not using option-group so we have more control over the layout -->
           <p class="row" style="max-width: 475px">
             <q-checkbox
+              v-for="(currency, index) in userOptions.currencies"
+              :key="currency.address"
+              v-model="userOptions.currencies[index].show"
               @input="generateTimeSeriesFigure()"
               class="col-xs-3"
-              v-model="userOptions.currencies[0].show"
-              :label="userOptions.currencies[0].label"
-            />
-            <q-checkbox
-              @input="generateTimeSeriesFigure()"
-              class="col-xs-3"
-              v-model="userOptions.currencies[1].show"
-              :label="userOptions.currencies[1].label"
-            />
-            <q-checkbox
-              @input="generateTimeSeriesFigure()"
-              class="col-xs-3"
-              v-model="userOptions.currencies[2].show"
-              :label="userOptions.currencies[2].label"
-            />
-            <q-checkbox
-              @input="generateTimeSeriesFigure()"
-              class="col-xs-3"
-              v-model="userOptions.currencies[3].show"
-              :label="userOptions.currencies[3].label"
-            />
-            <q-checkbox
-              @input="generateTimeSeriesFigure()"
-              class="col-xs-3"
-              v-model="userOptions.currencies[4].show"
-              :label="userOptions.currencies[4].label"
-            />
-            <q-checkbox
-              @input="generateTimeSeriesFigure()"
-              class="col-xs-3"
-              v-model="userOptions.currencies[5].show"
-              :label="userOptions.currencies[5].label"
-            />
-            <q-checkbox
-              @input="generateTimeSeriesFigure()"
-              class="col-xs-3"
-              v-model="userOptions.currencies[6].show"
-              :label="userOptions.currencies[6].label"
-            />
-            <q-checkbox
-              @input="generateTimeSeriesFigure()"
-              class="col-xs-3"
-              v-model="userOptions.currencies[7].show"
-              :label="userOptions.currencies[7].label"
+              :label="userOptions.currencies[index].label"
             />
           </p>
         </q-card>
@@ -177,11 +137,14 @@ function useCompoundRates() {
     dates: { startDate: '2019/04/01', endDate: date.formatDate(Date.now(), 'YYYY/MM/DD') },
     currencies: [
       { label: 'BAT', show: false, address: '0x6c8c6b02e7b2be14d4fa6022dfd6d75921d90e4e' },
+      { label: 'COMP', show: false, address: '0x70e36f6BF80a52b3B46b3aF8e106CC0ed743E8e4' },
       { label: 'DAI', show: true, address: '0x5d3a536e4d6dbd6114cc1ead35777bab948e3643' },
       { label: 'ETH', show: false, address: '0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5' },
       { label: 'REP', show: false, address: '0x158079ee67fce2f58472a96584a73c7ab9ac95c1' },
-      { label: 'SAI', show: true, address: '0xf5dce57282a584d2746faf1593d3121fcac444dc' },
-      { label: 'USDC', show: false, address: '0x39aa39c021dfbae8fac545936693ac917d5e7563' },
+      { label: 'SAI', show: false, address: '0xf5dce57282a584d2746faf1593d3121fcac444dc' },
+      { label: 'UNI', show: false, address: '0x35A18000230DA775CAc24873d00Ff85BccdeD550' },
+      { label: 'USDC', show: true, address: '0x39aa39c021dfbae8fac545936693ac917d5e7563' },
+      { label: 'USDT', show: false, address: '0xf650C3d88D12dB855b8bf7D11Be6C55A4e07dCC9' },
       { label: 'WBTC', show: false, address: '0xc11b1268c1a384e55c48c2391d8d480264a3a7f4' },
       { label: 'ZRX', show: false, address: '0xb3319f5d18bc0d84dd1b4825dcde5d5f7266d407' },
     ],

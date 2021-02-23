@@ -10,7 +10,7 @@
           <router-link active-class="active-header-item" class="col-auto header-item" exact :to="{ name: 'projects' }">
             Projects
           </router-link>
-          <a href="https://blog.mattsolomon.dev/" class="col-auto header-item"> Blog </a>
+          <a href="https://mattsolomon.substack.com/" class="col-auto header-item" target="_blank"> Blog </a>
           <router-link active-class="active-header-item" class="col-auto header-item" exact :to="{ name: 'contact' }">
             Contact
           </router-link>
